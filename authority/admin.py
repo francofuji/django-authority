@@ -40,7 +40,7 @@ class ActionPermissionInline(PermissionInline):
     raw_id_fields = ()
     template = 'admin/edit_inline/action_tabular.html'
 
-class ActionErrorList(forms.util.ErrorList):
+class ActionErrorList(forms.utils.ErrorList):
     def __init__(self, inline_formsets):
         for inline_formset in inline_formsets:
             self.extend(inline_formset.non_form_errors())
